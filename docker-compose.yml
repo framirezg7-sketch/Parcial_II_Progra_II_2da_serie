@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16
+    container_name: helpdesk_edu_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: helpdesk
+      POSTGRES_PASSWORD: helpdesk
+      POSTGRES_DB: helpdesk
+    ports:
+      # host:contenedor -> desde el host te conectas al puerto 5433
+      - "5433:5432"
+    volumes:
+      - helpdesk_db_data:/var/lib/postgresql/data
+
+volumes:
+  helpdesk_db_data:

@@ -1,0 +1,28 @@
+Comando: uv run pytest -v
+Fecha: 2026-09-25T03:23:01Z UTC
+Rama: main
+Commit: 1bb5a2d
+
+============================= test session starts =============================
+platform win32 -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\fredy\Desktop\Universidad\Progra 2\Parcial2\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\fredy\Desktop\Universidad\Progra 2\Parcial2
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 13 items
+
+tests/test_assign_and_notifications.py::test_duplicate_assignment_raises_without_side_effects PASSED [  7%]
+tests/test_assign_and_notifications.py::test_valid_assignment_still_works_after_rejected_duplicate PASSED [ 15%]
+tests/test_assign_and_notifications.py::test_webhook_notifier_receives_payload_on_valid_assign PASSED [ 23%]
+tests/test_sqlalchemy_repository.py::test_count_by_status_full_dict_after_commit_in_new_session PASSED [ 30%]
+tests/test_sqlalchemy_repository.py::test_count_by_status_empty_database_returns_empty_dict PASSED [ 38%]
+tests/test_tags.py::test_add_tag_normalizes_and_rejects_duplicates PASSED [ 46%]
+tests/test_tags.py::test_add_tag_rejects_blank_values PASSED             [ 53%]
+tests/test_tags.py::test_tags_are_independent_between_instances PASSED   [ 61%]
+tests/test_tags.py::test_tags_property_cannot_be_reassigned PASSED       [ 69%]
+tests/test_watchers.py::test_watchers_without_technician PASSED          [ 76%]
+tests/test_watchers.py::test_watchers_with_distinct_technician PASSED    [ 84%]
+tests/test_watchers.py::test_watchers_propagates_ticket_not_found PASSED [ 92%]
+tests/test_watchers.py::test_watchers_deduplicates_same_user_as_requester_and_assignee PASSED [100%]
+
+============================= 13 passed in 0.43s ==============================
